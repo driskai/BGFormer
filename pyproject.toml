@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "aerial_lane_bezier"
+version = "0.1.0"
+description = "Learning lane bezier graphs from aerial images."
+authors = [
+    "Hugh Blayney <hugh@drisk.ai>",
+    "Zach Tian <h.tian22@imperial.ac.uk>",
+    "Hamish Scott <hamish@drisk.ai>",
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+datasets = "^2.14.5"
+jax = { version = "^0.4.14", extras = ["cuda11_pip"] }
+jaxlib = "^0.4.14"
+python = "^3.10"
+matplotlib = "^3.7.2"
+numpy = "^1.25.2"
+optax = "^0.1.7"
+Pillow = "^10.0.0"
+rustworkx = "^0.13.1"
+scipy = "^1.9.3"
+shapely = "^2.0.1"
+timm = "^0.9.7"
+torch = { version = "^2.0.1+cu118", source="torch" }
+torch_geometric = "^2.3.1"
+tqdm = "^4.65.0"
+transformers = "^4.33.3"
+opencv-python = "^4.8.0.76"
+wandb = "^0.15.11"
+
+[[tool.poetry.source]]
+name = "jax-releases"
+url = "https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
+
+[[tool.poetry.source]]
+name = "torch"
+url = "https://download.pytorch.org/whl/cu118"
+default = false
+secondary = true
+
+[tool.poetry.group.dev.dependencies]
+python-dotenv = "^1.0.0"
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,8 @@
+{
+    "mlp_head_hidden_dimension": 512,
+    "position_loss_coefficient": 5,
+    "direction_loss_coefficient": 2,
+    "edge_existence_loss_coefficient": 0.2,
+    "edge_attribute_loss_coefficient": 1,
+    "num_negative_edges_per_positive_edge": 3
+}
